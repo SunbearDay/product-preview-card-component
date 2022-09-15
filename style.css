@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+  --color-dark-cyan: hsl(158, 36%, 37%);
+  --color-cream: hsl(30, 38%, 92%);
+
+  --color-very-dark-blue: hsl(212, 21%, 14%);
+  --color-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-cream);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 2em 1em;
+}
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+}
+
+p {
+  color: var(--color-dark-grayish-blue);
+}
+
+:is(img, picture) {
+  display: block;
+  max-width: 100%;
+}
+
+:is(button, input, select, textarea) {
+  font: inherit;
+}
+
+/*
+  Extra Stuff.
+*/
+button {
+  background-color: var(--color-dark-cyan);
+  border: 1px solid var(--color-dark-cyan);
+  border-radius: 0.7em;
+  color: var(--color-white);
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  gap: 1rem;
+  justify-content: center;
+  min-width: 100%;
+  padding-block: 1.5em;
+}
+
+button:hover {
+  background-color: var(--color-very-dark-blue);
+}
+
+/* Project Styles */
+
+@media (min-width: 900px) {
+  .card {
+    display: flex;
+  }
+}
+
+.card {
+  background-color: var(--color-white);
+  margin-bottom: 4rem;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 2em 1em;
+}
+
+.card-body p:first-child {
+  letter-spacing: 1ch;
+}
+
+.card-body > h2 {
+  margin-block: 1rem;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 2rem;
+}
+
+.card-price h2 {
+  color: var(--color-dark-cyan);
+}
+
+.card-price p {
+  text-decoration: line-through;
+}
+
