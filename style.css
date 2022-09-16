@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
@@ -7,7 +5,6 @@
 :root {
   --color-dark-cyan: hsl(158, 36%, 37%);
   --color-cream: hsl(30, 38%, 92%);
-
   --color-very-dark-blue: hsl(212, 21%, 14%);
   --color-dark-grayish-blue: hsl(228, 12%, 48%);
   --color-white: hsl(0, 0%, 100%);
@@ -15,26 +12,7 @@
 
 :is(*, *::before, *::after) {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
-}
-
-body {
-  background-color: var(--color-cream);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  padding: 2em 1em;
-}
-
-h2 {
-  font-family: 'Fraunces', serif;
-  font-size: 2rem;
-}
-
-p {
-  color: var(--color-dark-grayish-blue);
 }
 
 :is(img, picture) {
@@ -42,79 +20,99 @@ p {
   max-width: 100%;
 }
 
-:is(button, input, select, textarea) {
-  font: inherit;
+body {
+  background-color: var(--color-cream);
+  margin-top: 2rem;
+  padding: 1rem;
 }
 
-/*
-  Extra Stuff.
-*/
-button {
-  background-color: var(--color-dark-cyan);
-  border: 1px solid var(--color-dark-cyan);
-  border-radius: 0.7em;
-  color: var(--color-white);
+/* Footer / Attribution styles. */
+
+footer {
   display: flex;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
-  font-weight: 700;
-  gap: 1rem;
   justify-content: center;
-  min-width: 100%;
-  padding-block: 1.5em;
+  margin-top: 4rem;
 }
 
-button:hover {
-  background-color: var(--color-very-dark-blue);
+footer.attribution {
+  font-size: 11px;
+  text-align: center;
 }
 
-/* Project Styles */
+footer.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
+/* Card styles. */
 
 .card {
   background-color: var(--color-white);
-  margin-bottom: 4rem;
   border-radius: 0.7rem;
-  overflow: hidden;
+  color: var(--color-dark-grayish-blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   margin-inline: auto;
   max-width: 375px;
-
-}
-
-@media (min-width: 900px) {
-  .card {
-    --panel-width: 31ch;
-
-    display: grid;
-    grid-template-columns: var(--panel-width) var(--panel-width);
-    max-width: calc(var(--panel-width) * 2);
-  }
+  overflow: hidden;
 }
 
 .card-body {
-  padding: 2em 2em;
+  padding: 2em;
+}
+
+.card-body h2 {
+  color: var(--color-very-dark-blue);
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  margin-block: 1rem;
 }
 
 .card-body p:first-child {
   letter-spacing: 1ch;
 }
 
-.card-body > h2 {
-  margin-block: 1rem;
-}
-
 .card-price {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-block: 2rem;
+  margin-block: 1rem;
 }
 
-.card-price h2 {
+.card-price span:first-child {
   color: var(--color-dark-cyan);
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
 }
 
-.card-price p {
+.card-price span:last-child {
   text-decoration: line-through;
 }
+
+.card button {
+  background-color: var(--color-dark-cyan);
+  border: none;
+  border-radius: 0.7em;
+  color: var(--color-white);
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  gap: 1rem;
+  justify-content: center;
+  min-width: 100%;
+  padding-block: 1em;
+}
+
+.card button:hover {
+  background-color: var(--color-very-dark-blue);
+}
+
+@media (min-width: 900px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 62ch;
+  }
+}
+
 
