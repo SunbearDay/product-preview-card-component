@@ -70,21 +70,29 @@ button:hover {
 
 /* Project Styles */
 
-@media (min-width: 900px) {
-  .card {
-    display: flex;
-  }
-}
 
 .card {
   background-color: var(--color-white);
   margin-bottom: 4rem;
   border-radius: 0.7rem;
   overflow: hidden;
+  margin-inline: auto;
+  max-width: 375px;
+
+}
+
+@media (min-width: 900px) {
+  .card {
+    --panel-width: 31ch;
+
+    display: grid;
+    grid-template-columns: var(--panel-width) var(--panel-width);
+    max-width: calc(var(--panel-width) * 2);
+  }
 }
 
 .card-body {
-  padding: 2em 1em;
+  padding: 2em 2em;
 }
 
 .card-body p:first-child {

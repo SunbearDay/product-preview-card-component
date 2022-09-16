@@ -28,7 +28,11 @@
   </head>
   <body>
     <div class="card">
-      <img src="./images/image-product-mobile.jpg" alt="image-product-mobile" />
+      <picture>
+        <source srcset="/images/image-product-desktop.jpg" media="(min-width: 900px)" />
+        <img src="/images/image-product-mobile.jpg" alt="Perfume">
+      </picture>
+
 
       <div class="card-body">
         <p>PERFUME</p>
