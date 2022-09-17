@@ -2,6 +2,10 @@
 
 ![Design preview for the Product preview card component coding challenge](./design/desktop-preview.jpg)
 
+## Challenge Completed.
+
+The completed challenge is at [https://product-card-preview.surge.sh/](https://product-card-preview.surge.sh/).
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
